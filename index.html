@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tech Compass – Your complete guide to technology careers. Explore tech fields, discover learning roadmaps, and build your future with confidence.">
+<title>Tech Compass – Navigate Your Tech Future</title>
+<meta name="theme-color" content="#0a0e1a">
+<link rel="canonical" href="https://YOUR-SITE-URL/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tech Compass – Your Complete Guide to Technology Careers">
+<meta property="og:description" content="Explore tech fields, take the career quiz, follow learning roadmaps, and build your future with confidence.">
+<meta property="og:url" content="https://YOUR-SITE-URL/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Tech Compass","url":"https://YOUR-SITE-URL/","description":"A free guide to technology careers, learning roadmaps and tech terms for students and beginners."}</script>
+<!-- ANALYTICS: uncomment ONE option after you sign up (both are cookie-free).
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+<script defer data-domain="YOUR-SITE-URL" src="https://plausible.io/js/script.js"></script>
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS & RESET
+============================================================ */
+:root {
+  --bg: #0a0e1a;
+  --bg2: #0f1526;
+  --bg3: #151d35;
+  --surface: #1a2240;
+  --surface2: #1f2a4a;
+  --border: rgba(100,140,255,0.12);
+  --border2: rgba(100,140,255,0.22);
+  --text: #e8edf8;
+  --text2: #8fa3cc;
+  --text3: #5a6e9a;
+  --accent: #4f8fff;
+  --accent2: #7b5fff;
+  --accent3: #00e5b4;
+  --accent4: #ff6b6b;
+  --accent5: #ffc947;
+  --glow: rgba(79,143,255,0.18);
+  --glow2: rgba(123,95,255,0.15);
+  --radius: 16px;
+  --radius2: 12px;
+  --radius3: 8px;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow2: 0 8px 40px rgba(0,0,0,0.5);
+}
+[data-theme="light"] {
+  --bg: #f0f4ff;
+  --bg2: #e8eeff;
+  --bg3: #dce5ff;
+  --surface: #ffffff;
+  --surface2: #f5f8ff;
+  --border: rgba(79,143,255,0.15);
+  --border2: rgba(79,143,255,0.3);
+  --text: #1a2240;
+  --text2: #4a6090;
+  --text3: #8fa3cc;
+  --glow: rgba(79,143,255,0.12);
+  --glow2: rgba(123,95,255,0.1);
+  --shadow: 0 4px 24px rgba(79,143,255,0.1);
+  --shadow2: 0 8px 40px rgba(79,143,255,0.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+  transition:background var(--transition),color var(--transition);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+ul{list-style:none}
+
+/* ============================================================
+   SCROLLBAR
+============================================================ */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--surface2);border-radius:3px}
+
+/* ============================================================
+   UTILITY
+============================================================ */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+.section-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-display);font-size:12px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);
+  background:rgba(79,143,255,0.1);border:1px solid rgba(79,143,255,0.2);
+  padding:6px 14px;border-radius:50px;margin-bottom:20px;
+}
+.section-title{
+  font-family:var(--font-display);font-size:clamp(32px,5vw,52px);
+  font-weight:800;line-height:1.1;margin-bottom:16px;
+}
+.section-sub{font-size:18px;color:var(--text2);max-width:600px;line-height:1.7}
+.grad-text{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.grad-text2{
+  background:linear-gradient(135deg,var(--accent3),var(--accent));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:50px;font-family:var(--font-display);
+  font-weight:700;font-size:15px;transition:all var(--transition);
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;box-shadow:0 4px 20px rgba(79,143,255,0.4);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(79,143,255,0.5)}
+.btn-ghost{
+  background:var(--surface);border:1px solid var(--border2);color:var(--text);
+}
+.btn-ghost:hover{background:var(--surface2);border-color:var(--accent);transform:translateY(-2px)}
+.tag{
+  display:inline-block;padding:4px 12px;border-radius:50px;
+  font-size:12px;font-weight:600;font-family:var(--font-display);
+}
+.tag-easy{background:rgba(0,229,180,0.15);color:var(--accent3)}
+.tag-medium{background:rgba(255,201,71,0.15);color:var(--accent5)}
+.tag-hard{background:rgba(255,107,107,0.15);color:var(--accent4)}
+.hidden{display:none!important}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* ============================================================
+   NOISE OVERLAY
+============================================================ */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:0.4;
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:16px 0;
+  background:rgba(10,14,26,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:all var(--transition);
+}
+[data-theme="light"] nav{background:rgba(240,244,255,0.9)}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:1200px;margin:0 auto;padding:0 24px;
+}
+.nav-logo{
+  font-family:var(--font-display);font-weight:800;font-size:20px;
+  display:flex;align-items:center;gap:10px;
+}
+.nav-logo-icon{
+  width:36px;height:36px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{
+  font-size:13px;font-weight:500;padding:7px 14px;border-radius:8px;
+  color:var(--text2);transition:all var(--transition);
+}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--surface)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.theme-toggle{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--surface);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;transition:all var(--transition);
+}
+.theme-toggle:hover{background:var(--surface2);transform:rotate(20deg)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:10px;cursor:pointer}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--transition)}
+.mobile-menu{
+  display:none;position:fixed;top:70px;left:0;right:0;z-index:999;
+  background:var(--bg2);border-bottom:1px solid var(--border);
+  padding:20px 24px;flex-direction:column;gap:8px;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  padding:12px 16px;border-radius:10px;font-size:15px;
+  color:var(--text2);transition:all var(--transition);
+}
+.mobile-menu a:hover{background:var(--surface);color:var(--text)}
+
+/* ============================================================
+   HERO
+============================================================ */
+#hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding-top:80px;position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 800px 600px at 60% 40%, rgba(79,143,255,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 500px at 20% 70%, rgba(123,95,255,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 400px at 80% 80%, rgba(0,229,180,0.05) 0%, transparent 70%);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--border) 1px, transparent 1px),linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size:60px 60px;opacity:0.5;
+}
+.hero-content{position:relative;z-index:1;max-width:750px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--surface);border:1px solid var(--border2);
+  border-radius:50px;padding:8px 18px;margin-bottom:32px;
+  font-size:13px;color:var(--text2);
+}
+.hero-badge-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--accent3);
+  box-shadow:0 0 8px var(--accent3);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero-title{
+  font-family:var(--font-display);font-size:clamp(44px,7vw,80px);
+  font-weight:800;line-height:1.05;margin-bottom:24px;
+}
+.hero-sub{
+  font-size:20px;color:var(--text2);max-width:560px;
+  line-height:1.7;margin-bottom:40px;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:60px}
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:32px;
+  padding-top:40px;border-top:1px solid var(--border);
+}
+.stat-item{}
+.stat-num{
+  font-family:var(--font-display);font-size:28px;font-weight:800;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.stat-label{font-size:13px;color:var(--text3);margin-top:2px}
+.hero-visual{
+  position:absolute;right:-80px;top:50%;transform:translateY(-50%);
+  width:500px;pointer-events:none;
+}
+.floating-cards{position:relative;width:100%;height:400px}
+.fcard{
+  position:absolute;background:var(--surface);
+  border:1px solid var(--border2);border-radius:var(--radius);
+  padding:16px 20px;backdrop-filter:blur(10px);
+  box-shadow:var(--shadow);
+}
+.fcard:nth-child(1){top:0;left:40px;animation:float1 4s ease-in-out infinite}
+.fcard:nth-child(2){top:120px;left:0;animation:float2 4.5s ease-in-out infinite 0.5s}
+.fcard:nth-child(3){top:240px;left:60px;animation:float1 5s ease-in-out infinite 1s}
+@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* ============================================================
+   CAREER EXPLORER
+============================================================ */
+#careers{background:var(--bg2)}
+.career-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;
+  margin-top:56px;
+}
+.career-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+  transition:all var(--transition);cursor:pointer;
+}
+.career-card:hover{
+  border-color:var(--accent);
+  box-shadow:0 8px 40px var(--glow);
+  transform:translateY(-4px);
+}
+.career-card-header{
+  padding:24px 24px 0;display:flex;align-items:flex-start;gap:16px;
+}
+.career-icon{
+  width:52px;height:52px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;flex-shrink:0;
+}
+.career-card-meta{flex:1}
+.career-name{
+  font-family:var(--font-display);font-weight:700;font-size:18px;
+  margin-bottom:4px;
+}
+.career-card-body{padding:16px 24px 24px}
+.career-overview{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:16px}
+.career-skills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.skill-chip{
+  background:var(--bg3);border:1px solid var(--border);
+  padding:4px 10px;border-radius:50px;font-size:11px;color:var(--text2);
+}
+.career-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:16px;border-top:1px solid var(--border);
+}
+.career-expand{
+  font-size:13px;color:var(--accent);font-weight:600;
+  display:flex;align-items:center;gap:4px;
+  transition:gap var(--transition);
+}
+.career-card:hover .career-expand{gap:8px}
+
+/* Career Modal */
+.modal-overlay{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  opacity:0;pointer-events:none;transition:opacity var(--transition);
+}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{
+  background:var(--bg2);border:1px solid var(--border2);
+  border-radius:24px;max-width:700px;width:100%;max-height:85vh;
+  overflow-y:auto;padding:40px;
+  transform:scale(0.95) translateY(20px);
+  transition:transform var(--transition);
+}
+.modal-overlay.open .modal{transform:none}
+.modal-header{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.modal-icon{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px}
+.modal-title{font-family:var(--font-display);font-size:28px;font-weight:800}
+.modal-sub{color:var(--text2);font-size:14px;margin-top:4px}
+.modal-close{
+  margin-left:auto;width:36px;height:36px;border-radius:8px;
+  background:var(--surface);display:flex;align-items:center;justify-content:center;
+  font-size:20px;transition:all var(--transition);
+}
+.modal-close:hover{background:var(--surface2);transform:rotate(90deg)}
+.modal-section{margin-bottom:24px}
+.modal-section-title{
+  font-family:var(--font-display);font-weight:700;font-size:14px;
+  text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);
+  margin-bottom:12px;
+}
+.roadmap-steps{display:flex;flex-direction:column;gap:0}
+.roadmap-step{
+  display:flex;gap:16px;padding:16px 0;
+  border-left:2px solid var(--border);margin-left:11px;
+  position:relative;
+}
+.roadmap-step::before{
+  content:'';position:absolute;left:-7px;top:20px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--accent);border:2px solid var(--bg2);
+}
+.roadmap-step:last-child{border-left-color:transparent}
+.step-content{padding-left:16px}
+.step-title{font-weight:600;font-size:14px;margin-bottom:4px}
+.step-desc{font-size:13px;color:var(--text2)}
+.job-grid{display:flex;flex-wrap:wrap;gap:8px}
+.job-tag{
+  background:rgba(79,143,255,0.1);border:1px solid rgba(79,143,255,0.2);
+  padding:6px 14px;border-radius:8px;font-size:13px;color:var(--accent);
+}
+
+/* ============================================================
+   QUIZ
+============================================================ */
+#quiz{background:var(--bg)}
+.quiz-wrapper{
+  max-width:680px;margin:56px auto 0;
+  background:var(--surface);border:1px solid var(--border2);
+  border-radius:24px;padding:40px;
+}
+.quiz-progress{
+  display:flex;align-items:center;gap:12px;margin-bottom:32px;
+}
+.quiz-progress-bar{
+  flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;
+}
+.quiz-progress-fill{
+  height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border-radius:3px;transition:width 0.4s ease;
+}
+.quiz-step-num{font-size:13px;color:var(--text3);font-weight:600;white-space:nowrap}
+.quiz-question{
+  font-family:var(--font-display);font-size:22px;font-weight:700;
+  margin-bottom:8px;line-height:1.35;
+}
+.quiz-hint{font-size:14px;color:var(--text3);margin-bottom:28px}
+.quiz-options{display:flex;flex-direction:column;gap:10px}
+.quiz-option{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 20px;border-radius:12px;
+  border:1.5px solid var(--border);background:var(--bg2);
+  cursor:pointer;transition:all var(--transition);text-align:left;
+  font-size:15px;color:var(--text);
+}
+.quiz-option:hover{border-color:var(--accent);background:rgba(79,143,255,0.05)}
+.quiz-option.selected{border-color:var(--accent);background:rgba(79,143,255,0.1);color:var(--accent)}
+.quiz-option-icon{font-size:20px;flex-shrink:0}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px}
+.quiz-result{
+  text-align:center;padding:20px 0;
+}
+.quiz-result-icon{font-size:64px;margin-bottom:16px}
+.quiz-result-title{
+  font-family:var(--font-display);font-size:28px;font-weight:800;
+  margin-bottom:8px;
+}
+.quiz-result-sub{color:var(--text2);margin-bottom:24px}
+.quiz-recommendations{
+  display:flex;flex-direction:column;gap:12px;text-align:left;
+  margin-top:24px;
+}
+.quiz-rec-card{
+  display:flex;align-items:center;gap:14px;padding:16px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:12px;
+}
+.quiz-rec-rank{
+  width:28px;height:28px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:#fff;flex-shrink:0;
+}
+.quiz-rec-info{flex:1}
+.quiz-rec-name{font-weight:700;font-size:15px}
+.quiz-rec-match{font-size:13px;color:var(--accent3);margin-top:2px}
+
+/* ============================================================
+   ROADMAPS
+============================================================ */
+#roadmaps{background:var(--bg2)}
+.roadmap-tabs{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:40px;margin-bottom:40px;
+}
+.roadmap-tab{
+  padding:9px 20px;border-radius:50px;font-size:14px;font-weight:600;
+  border:1.5px solid var(--border);background:transparent;color:var(--text2);
+  transition:all var(--transition);
+}
+.roadmap-tab:hover{border-color:var(--accent);color:var(--text)}
+.roadmap-tab.active{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border-color:transparent;color:#fff;
+}
+.roadmap-panel{display:none}
+.roadmap-panel.active{display:block}
+.roadmap-visual{position:relative;padding-left:32px}
+.rv-step{
+  position:relative;margin-bottom:0;
+  padding:0 0 0 32px;
+}
+.rv-step::before{
+  content:'';position:absolute;left:0;top:24px;bottom:0;
+  width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),transparent);
+}
+.rv-step:last-child::before{display:none}
+.rv-dot{
+  position:absolute;left:-5px;top:18px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--bg2);
+  box-shadow:0 0 12px var(--accent);
+}
+.rv-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius2);padding:20px 24px;margin-bottom:20px;
+  margin-left:8px;transition:all var(--transition);
+}
+.rv-card:hover{border-color:var(--border2);box-shadow:var(--shadow)}
+.rv-card-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.rv-phase{
+  font-family:var(--font-display);font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.1em;
+  padding:4px 10px;border-radius:50px;
+  background:rgba(79,143,255,0.1);color:var(--accent);
+}
+.rv-title{font-family:var(--font-display);font-weight:700;font-size:17px}
+.rv-desc{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:12px}
+.rv-resources{display:flex;flex-wrap:wrap;gap:6px}
+.rv-res{
+  font-size:12px;padding:3px 10px;border-radius:50px;
+  background:var(--bg3);border:1px solid var(--border);color:var(--text3);
+}
+.progress-check{
+  display:flex;align-items:center;gap:8px;margin-top:12px;
+  font-size:13px;color:var(--text3);cursor:pointer;
+}
+.check-box{
+  width:18px;height:18px;border-radius:5px;
+  border:2px solid var(--border2);display:flex;align-items:center;
+  justify-content:center;transition:all var(--transition);flex-shrink:0;
+}
+.progress-check.done .check-box{
+  background:var(--accent3);border-color:var(--accent3);
+}
+.progress-check.done .check-label{color:var(--accent3);text-decoration:line-through}
+
+/* ============================================================
+   TECH DICTIONARY
+============================================================ */
+#dictionary{background:var(--bg)}
+.dict-search-wrapper{
+  max-width:600px;margin:40px auto 40px;
+  position:relative;
+}
+.dict-search{
+  width:100%;padding:16px 56px 16px 20px;
+  background:var(--surface);border:1.5px solid var(--border2);
+  border-radius:50px;font-size:16px;color:var(--text);
+  font-family:var(--font-body);outline:none;
+  transition:border-color var(--transition);
+}
+.dict-search:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--glow)}
+.dict-search-icon{
+  position:absolute;right:20px;top:50%;transform:translateY(-50%);
+  font-size:20px;pointer-events:none;
+}
+.dict-categories{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.dict-cat{
+  padding:7px 16px;border-radius:50px;font-size:13px;font-weight:600;
+  border:1.5px solid var(--border);background:transparent;color:var(--text2);
+  cursor:pointer;transition:all var(--transition);
+}
+.dict-cat:hover,.dict-cat.active{
+  border-color:var(--accent2);background:rgba(123,95,255,0.1);color:var(--accent2);
+}
+.dict-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;
+}
+.dict-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius2);padding:20px;
+  transition:all var(--transition);
+}
+.dict-card:hover{border-color:var(--border2);box-shadow:var(--shadow)}
+.dict-term{
+  font-family:var(--font-display);font-weight:700;font-size:16px;
+  margin-bottom:8px;display:flex;align-items:center;gap:8px;
+}
+.dict-def{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:10px}
+.dict-example{
+  font-size:13px;color:var(--text3);font-style:italic;
+  padding:10px 14px;background:var(--bg3);border-radius:8px;
+  border-left:3px solid var(--accent2);
+}
+
+/* ============================================================
+   STUDENT JOURNEY
+============================================================ */
+#journey{background:var(--bg2)}
+.journey-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:24px;margin-top:56px;
+}
+.journey-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px;
+  transition:all var(--transition);
+}
+.journey-card:hover{border-color:var(--border2);box-shadow:var(--shadow2);transform:translateY(-3px)}
+.journey-stage{
+  display:flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.journey-icon{
+  width:48px;height:48px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.journey-stage-name{font-family:var(--font-display);font-weight:700;font-size:17px}
+.journey-stage-label{font-size:12px;color:var(--text3);margin-top:2px}
+.journey-items{display:flex;flex-direction:column;gap:10px}
+.journey-item{
+  display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text2);
+}
+.journey-item-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:7px;flex-shrink:0}
+.journey-item-text{}
+
+/* ============================================================
+   MYTHS
+============================================================ */
+#myths{background:var(--bg)}
+.myths-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+  gap:20px;margin-top:56px;
+}
+.myth-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+  transition:all var(--transition);
+}
+.myth-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.myth-top{
+  padding:20px 24px;background:rgba(255,107,107,0.06);
+  border-bottom:1px solid var(--border);
+  display:flex;gap:12px;align-items:flex-start;
+}
+.myth-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.myth-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent4);margin-bottom:6px}
+.myth-text{font-size:14px;color:var(--text);font-weight:500;line-height:1.5}
+.myth-bottom{
+  padding:20px 24px;background:rgba(0,229,180,0.04);
+  display:flex;gap:12px;align-items:flex-start;
+}
+.myth-fact-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent3);margin-bottom:6px}
+.myth-fact-text{font-size:14px;color:var(--text2);line-height:1.6}
+
+/* ============================================================
+   RESOURCES
+============================================================ */
+#resources{background:var(--bg2)}
+.resource-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px;margin-bottom:32px}
+.resource-tab{
+  padding:9px 20px;border-radius:50px;font-size:14px;font-weight:600;
+  border:1.5px solid var(--border);background:transparent;color:var(--text2);
+  cursor:pointer;transition:all var(--transition);
+}
+.resource-tab.active{
+  background:linear-gradient(135deg,var(--accent3),var(--accent));
+  border-color:transparent;color:#fff;
+}
+.resource-tab:hover:not(.active){border-color:var(--accent3);color:var(--text)}
+.resource-panel{display:none}
+.resource-panel.active{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.res-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius2);padding:20px;
+  display:flex;gap:14px;align-items:flex-start;
+  transition:all var(--transition);cursor:pointer;
+}
+.res-card:hover{border-color:var(--border2);box-shadow:var(--shadow);transform:translateY(-2px)}
+.res-icon{
+  width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+  background:var(--bg3);flex-shrink:0;
+}
+.res-info{flex:1}
+.res-name{font-weight:700;font-size:15px;margin-bottom:4px}
+.res-desc{font-size:13px;color:var(--text2);line-height:1.5;margin-bottom:8px}
+.res-free{
+  font-size:11px;font-weight:700;text-transform:uppercase;padding:3px 8px;
+  border-radius:4px;display:inline-block;
+}
+.res-free.free{background:rgba(0,229,180,0.12);color:var(--accent3)}
+.res-free.paid{background:rgba(255,201,71,0.12);color:var(--accent5)}
+.res-free.mixed{background:rgba(79,143,255,0.12);color:var(--accent)}
+
+/* ============================================================
+   AI MENTOR CHAT
+============================================================ */
+#mentor{background:var(--bg)}
+.chat-wrapper{
+  max-width:760px;margin:56px auto 0;
+  background:var(--surface);border:1px solid var(--border2);
+  border-radius:24px;overflow:hidden;
+}
+.chat-header{
+  padding:20px 28px;background:var(--surface2);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:14px;
+}
+.chat-avatar{
+  width:44px;height:44px;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.chat-name{font-family:var(--font-display);font-weight:700;font-size:17px}
+.chat-status{
+  font-size:12px;color:var(--accent3);margin-top:2px;
+  display:flex;align-items:center;gap:6px;
+}
+.chat-status-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent3);animation:pulse 2s infinite;
+}
+.chat-messages{
+  height:380px;overflow-y:auto;padding:24px;
+  display:flex;flex-direction:column;gap:16px;
+}
+.msg{display:flex;gap:10px;max-width:85%}
+.msg.user{flex-direction:row-reverse;align-self:flex-end}
+.msg-avatar{
+  width:32px;height:32px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:15px;
+}
+.msg.bot .msg-avatar{background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.msg.user .msg-avatar{background:var(--surface2);border:1px solid var(--border)}
+.msg-bubble{
+  padding:12px 16px;border-radius:16px;font-size:14px;line-height:1.6;
+}
+.msg.bot .msg-bubble{
+  background:var(--bg3);border:1px solid var(--border);
+  border-top-left-radius:4px;
+}
+.msg.user .msg-bubble{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;border-top-right-radius:4px;
+}
+.chat-typing{
+  display:flex;align-items:center;gap:8px;padding:12px 16px;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:16px;border-top-left-radius:4px;
+  width:fit-content;
+}
+.typing-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--text3);
+  animation:typing 1.2s infinite;
+}
+.typing-dot:nth-child(2){animation-delay:0.2s}
+.typing-dot:nth-child(3){animation-delay:0.4s}
+@keyframes typing{0%,100%{opacity:0.4;transform:scale(0.8)}50%{opacity:1;transform:scale(1)}}
+.chat-suggestions{
+  display:flex;flex-wrap:wrap;gap:8px;
+  padding:0 24px 16px;
+}
+.chat-sugg{
+  font-size:12px;padding:7px 14px;border-radius:50px;
+  background:var(--bg3);border:1px solid var(--border);color:var(--text2);
+  cursor:pointer;transition:all var(--transition);
+}
+.chat-sugg:hover{border-color:var(--accent);color:var(--accent);background:rgba(79,143,255,0.08)}
+.chat-input-area{
+  padding:16px 24px;border-top:1px solid var(--border);
+  display:flex;gap:10px;
+}
+.chat-input{
+  flex:1;padding:12px 18px;background:var(--bg3);
+  border:1.5px solid var(--border);border-radius:50px;
+  font-size:14px;color:var(--text);font-family:var(--font-body);
+  outline:none;transition:border-color var(--transition);
+}
+.chat-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--glow)}
+.chat-send{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;transition:all var(--transition);
+}
+.chat-send:hover{transform:scale(1.1);box-shadow:0 4px 16px rgba(79,143,255,0.4)}
+
+/* ============================================================
+   DASHBOARD
+============================================================ */
+#dashboard{background:var(--bg2)}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.dash-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px;
+}
+.dash-card-title{
+  font-family:var(--font-display);font-weight:700;font-size:18px;
+  margin-bottom:20px;display:flex;align-items:center;gap:10px;
+}
+.dash-card-title-icon{
+  width:36px;height:36px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;font-size:18px;
+}
+.progress-ring-wrapper{
+  display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;
+}
+.progress-ring-item{text-align:center}
+.ring-label{font-size:13px;color:var(--text2);margin-top:8px;font-weight:500}
+.ring-svg{display:block}
+.ring-bg{stroke:var(--bg3)}
+.ring-fill{stroke-linecap:round;transition:stroke-dashoffset 1s ease}
+.progress-item{
+  display:flex;align-items:center;gap:14px;padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+.progress-item:last-child{border-bottom:none}
+.pi-icon{font-size:20px;flex-shrink:0}
+.pi-info{flex:1}
+.pi-title{font-size:14px;font-weight:600;margin-bottom:4px}
+.pi-bar{height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
+.pi-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1s ease}
+.pi-pct{font-size:12px;color:var(--text3);margin-left:auto;font-weight:700}
+.activity-list{display:flex;flex-direction:column;gap:0}
+.activity-item{
+  display:flex;align-items:center;gap:14px;padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+.activity-item:last-child{border-bottom:none}
+.activity-dot{
+  width:10px;height:10px;border-radius:50%;flex-shrink:0;
+}
+.activity-text{font-size:14px;flex:1}
+.activity-text strong{display:block;font-weight:600}
+.activity-text span{font-size:12px;color:var(--text3)}
+.activity-badge{
+  font-size:11px;padding:4px 10px;border-radius:50px;
+  background:rgba(0,229,180,0.1);color:var(--accent3);font-weight:700;
+}
+
+/* Feedback + dashboard extras */
+#feedback{background:var(--bg2)}
+.fb-wrap{max-width:640px;margin:48px auto 0;background:var(--surface);border:1px solid var(--border2);border-radius:24px;padding:36px}
+.fb-wrap fieldset{border:0;margin:0 0 22px;padding:0}
+.fb-wrap legend,.fb-label{font-family:var(--font-display);font-weight:700;font-size:14px;margin-bottom:10px;display:block;padding:0}
+.fb-rate{display:flex;gap:8px;flex-wrap:wrap}
+.fb-rate label{cursor:pointer;position:relative}
+.fb-rate input{position:absolute;opacity:0;width:1px;height:1px}
+.fb-rate span{display:flex;flex-direction:column;align-items:center;gap:2px;width:68px;padding:10px 4px;border:1.5px solid var(--border);border-radius:12px;background:var(--bg2);font-size:22px;transition:all var(--transition)}
+.fb-rate span small{font-size:11px;color:var(--text3);font-family:var(--font-body)}
+.fb-rate label:hover span{border-color:var(--accent)}
+.fb-rate input:checked+span{border-color:var(--accent);background:rgba(79,143,255,0.12)}
+.fb-rate input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.fb-field{width:100%;padding:13px 16px;background:var(--bg3);border:1.5px solid var(--border);border-radius:12px;color:var(--text);font:inherit;font-size:14px;outline:none;margin-bottom:22px}
+.fb-field:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--glow)}
+textarea.fb-field{min-height:110px;resize:vertical}
+.fb-msg{margin-top:14px;font-size:14px;min-height:20px}
+.fb-note{font-size:12px;color:var(--text3);margin-top:10px}
+.dash-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px;font-size:13px;color:var(--text3)}
+.dash-reset{padding:7px 16px;border-radius:50px;border:1.5px solid var(--border2);color:var(--text2);font-size:13px;font-weight:600;transition:all var(--transition)}
+.dash-reset:hover{border-color:var(--accent4);color:var(--accent4)}
+.progress-check:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.empty-note{font-size:14px;color:var(--text3);padding:12px 0}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer{
+  background:var(--bg3);border-top:1px solid var(--border);
+  padding:60px 0 30px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;
+}
+.footer-brand{max-width:300px}
+.footer-logo{
+  font-family:var(--font-display);font-weight:800;font-size:22px;
+  display:flex;align-items:center;gap:10px;margin-bottom:16px;
+}
+.footer-desc{font-size:14px;color:var(--text3);line-height:1.7}
+.footer-col-title{
+  font-family:var(--font-display);font-weight:700;font-size:14px;
+  text-transform:uppercase;letter-spacing:0.08em;color:var(--text);
+  margin-bottom:16px;
+}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:14px;color:var(--text3);transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{
+  padding-top:24px;border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:13px;color:var(--text3)}
+.footer-heart{color:var(--accent4)}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media(max-width:1024px){
+  .hero-visual{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .dash-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .section{padding:64px 0}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero-title{font-size:40px}
+  .hero-sub{font-size:17px}
+  .footer-grid{grid-template-columns:1fr}
+  .career-grid{grid-template-columns:1fr}
+  .myths-grid{grid-template-columns:1fr}
+  .journey-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .modal{padding:24px}
+  .quiz-wrapper{padding:24px}
+  .hero-stats{gap:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">🧭</div>
+      Tech Compass
+    </a>
+    <div class="nav-links">
+      <a href="#careers">Careers</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#roadmaps">Roadmaps</a>
+      <a href="#dictionary">Dictionary</a>
+      <a href="#journey">Journey</a>
+      <a href="#resources">Resources</a>
+      <a href="#mentor">AI Mentor</a>
+      <a href="#dashboard">Dashboard</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode">🌙</button>
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#careers" onclick="closeMobileMenu()">🎯 Careers</a>
+  <a href="#quiz" onclick="closeMobileMenu()">📝 Quiz</a>
+  <a href="#roadmaps" onclick="closeMobileMenu()">🗺️ Roadmaps</a>
+  <a href="#dictionary" onclick="closeMobileMenu()">📚 Dictionary</a>
+  <a href="#journey" onclick="closeMobileMenu()">🎓 Journey</a>
+  <a href="#resources" onclick="closeMobileMenu()">📦 Resources</a>
+  <a href="#mentor" onclick="closeMobileMenu()">🤖 AI Mentor</a>
+  <a href="#dashboard" onclick="closeMobileMenu()">📊 Dashboard</a>
+</div>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Free for all students — No signup required
+      </div>
+      <h1 class="hero-title">
+        Your Complete Guide to<br>
+        <span class="grad-text">Technology Careers</span>
+      </h1>
+      <p class="hero-sub">
+        Explore tech fields, discover learning roadmaps, and build your future with confidence. Designed for students and beginners.
+      </p>
+      <div class="hero-actions">
+        <a href="#careers" class="btn btn-primary">Explore Careers →</a>
+        <a href="#quiz" class="btn btn-ghost">Take Career Quiz</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">9+</div>
+          <div class="stat-label">Tech Career Paths</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Learning Resources</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Tech Terms Explained</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Student Journey Maps</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CAREER EXPLORER
+============================================================ -->
+<section id="careers" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">🎯 Career Explorer</span>
+      <h2 class="section-title">Find Your <span class="grad-text">Tech Path</span></h2>
+      <p class="section-sub">Explore 9 major technology career fields with detailed roadmaps, required skills, and job opportunities.</p>
+    </div>
+    <div class="career-grid" id="careerGrid"></div>
+  </div>
+</section>
+
+<!-- Career Modal -->
+<div class="modal-overlay" id="careerModal" onclick="closeModal(event)">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- ============================================================
+     TECH CAREER QUIZ
+============================================================ -->
+<section id="quiz" class="section">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto 0">
+      <span class="section-label">📝 Career Quiz</span>
+      <h2 class="section-title">Discover Your <span class="grad-text2">Tech Match</span></h2>
+      <p class="section-sub" style="margin:0 auto">Answer 6 quick questions and get personalized tech career recommendations based on your interests.</p>
+    </div>
+    <div class="quiz-wrapper fade-in" id="quizWrapper"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEARNING ROADMAPS
+============================================================ -->
+<section id="roadmaps" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">🗺️ Learning Roadmaps</span>
+      <h2 class="section-title">Step-by-Step <span class="grad-text">Learning Paths</span></h2>
+      <p class="section-sub">Visual roadmaps with progress tracking. Check off milestones as you complete them.</p>
+    </div>
+    <div class="roadmap-tabs fade-in" id="roadmapTabs"></div>
+    <div id="roadmapPanels"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TECH DICTIONARY
+============================================================ -->
+<section id="dictionary" class="section">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="section-label">📚 Tech Dictionary</span>
+      <h2 class="section-title">Plain English <span class="grad-text2">Tech Terms</span></h2>
+      <p class="section-sub" style="margin:0 auto">No confusing jargon. Just simple, clear explanations of technical terms every beginner needs to know.</p>
+    </div>
+    <div class="dict-search-wrapper fade-in">
+      <input class="dict-search" type="text" id="dictSearch" placeholder="Search any tech term..." oninput="filterDict()">
+      <span class="dict-search-icon">🔍</span>
+    </div>
+    <div class="dict-categories fade-in" id="dictCategories"></div>
+    <div class="dict-grid" id="dictGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STUDENT JOURNEY GUIDE
+============================================================ -->
+<section id="journey" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">🎓 Student Journey</span>
+      <h2 class="section-title">Your <span class="grad-text">Learning Journey</span></h2>
+      <p class="section-sub">Tailored guidance for every stage of your student life — from school to your first job.</p>
+    </div>
+    <div class="journey-grid fade-in" id="journeyGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMMON MYTHS
+============================================================ -->
+<section id="myths" class="section">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="section-label">💡 Myth Busters</span>
+      <h2 class="section-title">Tech <span class="grad-text2">Myths Busted</span></h2>
+      <p class="section-sub" style="margin:0 auto">Common misconceptions that hold students back — and the truth behind them.</p>
+    </div>
+    <div class="myths-grid fade-in" id="mythsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESOURCE HUB
+============================================================ -->
+<section id="resources" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">📦 Resource Hub</span>
+      <h2 class="section-title">Curated <span class="grad-text">Learning Resources</span></h2>
+      <p class="section-sub">Best free and paid resources handpicked for beginners — courses, books, platforms, and YouTube channels.</p>
+    </div>
+    <div class="resource-tabs fade-in" id="resourceTabs"></div>
+    <div id="resourcePanels"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AI MENTOR CHAT
+============================================================ -->
+<section id="mentor" class="section">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="section-label">🤖 AI Mentor</span>
+      <h2 class="section-title">Your Personal <span class="grad-text">Tech Guide</span></h2>
+      <p class="section-sub" style="margin:0 auto">Ask anything about tech careers, learning paths, or coding. Get instant, personalized guidance.</p>
+    </div>
+    <div class="chat-wrapper fade-in" id="chatWrapper">
+      <div class="chat-header">
+        <div class="chat-avatar">🤖</div>
+        <div>
+          <div class="chat-name">Compass AI</div>
+          <div class="chat-status">
+            <span class="chat-status-dot"></span>
+            Online — Powered by Claude AI
+          </div>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg bot">
+          <div class="msg-avatar">🤖</div>
+          <div class="msg-bubble">Hi! I'm Compass AI, your personal tech career mentor. 👋<br><br>I can help you choose a career path, create a learning plan, answer coding questions, or guide you through any tech topic. What would you like to explore today?</div>
+        </div>
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="chat-sugg" onclick="sendSuggestion(this.textContent)">Which career suits me?</button>
+        <button class="chat-sugg" onclick="sendSuggestion(this.textContent)">How to start coding?</button>
+        <button class="chat-sugg" onclick="sendSuggestion(this.textContent)">Best languages to learn</button>
+        <button class="chat-sugg" onclick="sendSuggestion(this.textContent)">Roadmap for beginners</button>
+      </div>
+      <div class="chat-input-area">
+        <input class="chat-input" type="text" id="chatInput" placeholder="Ask anything about tech careers..." onkeypress="if(event.key==='Enter')sendChat()">
+        <button class="chat-send" onclick="sendChat()">➤</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DASHBOARD
+============================================================ -->
+<section id="dashboard" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">📊 Progress Dashboard</span>
+      <h2 class="section-title">Track Your <span class="grad-text">Progress</span></h2>
+      <p class="section-sub">Tick off roadmap steps and explore careers — your progress is saved automatically.</p>
+      <div class="dash-tools"><span>💾 Saved privately on this device only.</span><button class="dash-reset" onclick="resetProgress()">Reset progress</button></div>
+    </div>
+    <div class="dash-grid fade-in">
+      <div class="dash-card">
+        <div class="dash-card-title">
+          <div class="dash-card-title-icon" style="background:rgba(79,143,255,0.1)">📈</div>
+          Learning Progress
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0" id="progressList"></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-title">
+          <div class="dash-card-title-icon" style="background:rgba(0,229,180,0.1)">🏆</div>
+          Overall Completion
+        </div>
+        <div class="progress-ring-wrapper" id="progressRings">
+          <svg style="display:none">
+            <defs>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#4f8fff"/>
+                <stop offset="100%" style="stop-color:#7b5fff"/>
+              </linearGradient>
+              <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00e5b4"/>
+                <stop offset="100%" style="stop-color:#4f8fff"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="dash-card" style="grid-column:1/-1">
+        <div class="dash-card-title">
+          <div class="dash-card-title-icon" style="background:rgba(255,201,71,0.1)">⚡</div>
+          Recent Activity
+        </div>
+        <div class="activity-list" id="activityList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEEDBACK (works with Netlify Forms)
+============================================================ -->
+<section id="feedback" class="section">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="section-label">💬 Feedback</span>
+      <h2 class="section-title">Help Us <span class="grad-text2">Improve</span></h2>
+      <p class="section-sub" style="margin:0 auto">Tell us what worked and what didn't. It takes 30 seconds and is completely anonymous.</p>
+    </div>
+    <form class="fb-wrap fade-in" id="feedbackForm" name="feedback" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="feedback">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+      <fieldset>
+        <legend>How was your experience?</legend>
+        <div class="fb-rate">
+          <label><input type="radio" name="rating" value="1"><span>😞<small>Poor</small></span></label>
+          <label><input type="radio" name="rating" value="2"><span>😐<small>Okay</small></span></label>
+          <label><input type="radio" name="rating" value="3"><span>🙂<small>Good</small></span></label>
+          <label><input type="radio" name="rating" value="4"><span>😀<small>Great</small></span></label>
+          <label><input type="radio" name="rating" value="5"><span>🤩<small>Love it</small></span></label>
+        </div>
+      </fieldset>
+      <label class="fb-label" for="fbRole">I am a…</label>
+      <select class="fb-field" id="fbRole" name="role">
+        <option>School student</option><option>College student</option><option>Beginner / career switcher</option><option>Parent or teacher</option><option>Other</option>
+      </select>
+      <label class="fb-label" for="fbText">What should we add or fix?</label>
+      <textarea class="fb-field" id="fbText" name="message" maxlength="1000" placeholder="e.g. Add a roadmap for…"></textarea>
+      <button type="submit" class="btn btn-primary">Send Feedback</button>
+      <div class="fb-msg" id="fbMsg" role="status" aria-live="polite"></div>
+      <p class="fb-note">Please don't include personal details like your name, phone number or address.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="nav-logo-icon">🧭</div>
+          Tech Compass
+        </div>
+        <p class="footer-desc">Helping students and beginners navigate the technology industry with confidence. Free, forever.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <div class="footer-links">
+          <a href="#careers">Career Paths</a>
+          <a href="#quiz">Career Quiz</a>
+          <a href="#roadmaps">Roadmaps</a>
+          <a href="#dictionary">Dictionary</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Learn</div>
+        <div class="footer-links">
+          <a href="#journey">Student Journey</a>
+          <a href="#myths">Myth Busters</a>
+          <a href="#resources">Resources</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Tools</div>
+        <div class="footer-links">
+          <a href="#mentor">AI Mentor</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#feedback">Feedback</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Tech Compass. Made with <span class="footer-heart">♥</span> for students.</div>
+      <div class="footer-copy">Privacy: anonymous, cookie-free analytics. Your progress is stored only on your own device.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+// ============================================================
+// DATA
+// ============================================================
+const CAREERS = [
+  {
+    id:'software',icon:'💻',color:'rgba(79,143,255,0.15)',
+    name:'Software Development',
+    tagline:'Build the apps that power the world',
+    overview:'Software developers design, build, and maintain applications and systems software. From mobile apps to enterprise solutions, this is the broadest and most in-demand tech career.',
+    skills:['Python','Java','Data Structures','Algorithms','Git','Problem Solving','OOP'],
+    difficulty:'medium',
+    jobs:['Software Engineer','Backend Developer','Full-Stack Developer','DevOps Engineer','Systems Programmer'],
+    roadmap:[
+      {title:'Programming Basics',desc:'Learn Python or Java fundamentals: variables, loops, functions, OOP'},
+      {title:'Data Structures & Algorithms',desc:'Arrays, stacks, queues, trees, sorting, searching'},
+      {title:'Version Control',desc:'Git & GitHub — push, pull, branches, collaboration'},
+      {title:'Build Projects',desc:'3–5 personal projects showcasing real-world problem solving'},
+      {title:'CS Fundamentals',desc:'OS concepts, networking basics, databases (SQL)'},
+      {title:'Internship & Jobs',desc:'Apply to internships, contribute to open source, build your portfolio'},
+    ]
+  },
+  {
+    id:'webdev',icon:'🌐',color:'rgba(123,95,255,0.15)',
+    name:'Web Development',
+    tagline:'Build websites and web applications',
+    overview:'Web developers create everything on the internet — from personal blogs to massive e-commerce platforms. One of the fastest paths to getting a tech job.',
+    skills:['HTML','CSS','JavaScript','React','Node.js','Databases','REST APIs'],
+    difficulty:'easy',
+    jobs:['Frontend Developer','Backend Developer','Full-Stack Developer','Web Designer','WordPress Developer'],
+    roadmap:[
+      {title:'HTML & CSS',desc:'Structure and style webpages. Build static sites from scratch'},
+      {title:'JavaScript',desc:'Add interactivity: DOM, events, fetch API, ES6+'},
+      {title:'React / Vue',desc:'Learn a modern JS framework for building dynamic UIs'},
+      {title:'Backend Basics',desc:'Node.js + Express, databases (MongoDB or PostgreSQL)'},
+      {title:'Deploy Projects',desc:'Host on Netlify, Vercel, or Render. Build a portfolio site'},
+      {title:'Job Ready',desc:'Apply for junior developer roles with 3+ live projects'},
+    ]
+  },
+  {
+    id:'mobile',icon:'📱',color:'rgba(0,229,180,0.1)',
+    name:'Mobile Development',
+    tagline:'Create apps for iOS and Android',
+    overview:'Mobile developers build apps for smartphones and tablets. With billions of mobile users, it\'s one of the most impactful fields in tech.',
+    skills:['Java/Kotlin','Swift','React Native','Flutter','APIs','UI Design','App Store'],
+    difficulty:'medium',
+    jobs:['Android Developer','iOS Developer','React Native Dev','Flutter Developer','Mobile QA Engineer'],
+    roadmap:[
+      {title:'Choose Platform',desc:'Start with Android (Kotlin) or iOS (Swift), or cross-platform (Flutter)'},
+      {title:'Core Language',desc:'Master the fundamentals of your chosen language'},
+      {title:'Mobile UI Basics',desc:'Layouts, navigation, components, user interaction patterns'},
+      {title:'APIs & Storage',desc:'REST APIs, local storage, authentication'},
+      {title:'Publish an App',desc:'Launch on Google Play Store or Apple App Store'},
+      {title:'Portfolio & Jobs',desc:'2–3 apps live, apply for junior roles'},
+    ]
+  },
+  {
+    id:'ai',icon:'🧠',color:'rgba(255,107,107,0.1)',
+    name:'AI & Machine Learning',
+    tagline:'Teach computers to think and learn',
+    overview:'AI/ML engineers build systems that learn from data to make predictions, recognize patterns, and automate complex tasks. The most exciting field in tech right now.',
+    skills:['Python','Math','Statistics','TensorFlow','PyTorch','Data Analysis','Linear Algebra'],
+    difficulty:'hard',
+    jobs:['ML Engineer','AI Researcher','Data Scientist','NLP Engineer','Computer Vision Engineer'],
+    roadmap:[
+      {title:'Python & Math',desc:'Python programming + Linear Algebra, Calculus, Statistics'},
+      {title:'Data Analysis',desc:'NumPy, Pandas, data cleaning, visualization (Matplotlib)'},
+      {title:'ML Fundamentals',desc:'Supervised, unsupervised learning. Scikit-learn'},
+      {title:'Deep Learning',desc:'Neural networks, TensorFlow or PyTorch'},
+      {title:'Projects',desc:'Kaggle competitions, end-to-end ML projects'},
+      {title:'Research & Specialization',desc:'NLP, Computer Vision, Reinforcement Learning'},
+    ]
+  },
+  {
+    id:'data',icon:'📊',color:'rgba(255,201,71,0.1)',
+    name:'Data Science',
+    tagline:'Turn raw data into powerful insights',
+    overview:'Data scientists extract meaningful insights from large datasets to drive business decisions. Combines statistics, programming, and domain expertise.',
+    skills:['Python/R','SQL','Statistics','Pandas','Tableau','Machine Learning','Storytelling'],
+    difficulty:'medium',
+    jobs:['Data Scientist','Data Analyst','Business Intelligence Analyst','Data Engineer','Quantitative Analyst'],
+    roadmap:[
+      {title:'Python & SQL',desc:'Core Python with Pandas, NumPy + SQL for data querying'},
+      {title:'Statistics',desc:'Probability, hypothesis testing, regression, distributions'},
+      {title:'Data Visualization',desc:'Matplotlib, Seaborn, Tableau, Power BI'},
+      {title:'Machine Learning',desc:'Scikit-learn, model evaluation, feature engineering'},
+      {title:'Real Datasets',desc:'Work on real-world datasets: Kaggle, UCI ML Repository'},
+      {title:'Business Acumen',desc:'Translate data findings into actionable business insights'},
+    ]
+  },
+  {
+    id:'cyber',icon:'🛡️',color:'rgba(79,143,255,0.12)',
+    name:'Cybersecurity',
+    tagline:'Protect systems, data, and networks',
+    overview:'Cybersecurity professionals defend organizations from digital attacks. With cyber threats growing daily, this field has a massive skills shortage worldwide.',
+    skills:['Networking','Linux','Python','Ethical Hacking','Cryptography','Firewalls','SIEM'],
+    difficulty:'hard',
+    jobs:['Security Analyst','Penetration Tester','SOC Analyst','Security Engineer','CISO'],
+    roadmap:[
+      {title:'Networking Fundamentals',desc:'TCP/IP, DNS, HTTP, firewalls, OSI model'},
+      {title:'Linux Basics',desc:'Command line, file permissions, scripting'},
+      {title:'Security Concepts',desc:'CIA triad, encryption, authentication, common attacks'},
+      {title:'Ethical Hacking',desc:'TryHackMe, HackTheBox, Kali Linux, CTF competitions'},
+      {title:'Certifications',desc:'CompTIA Security+, CEH, or Google Cybersecurity Cert'},
+      {title:'Specialization',desc:'Choose: Penetration Testing, Digital Forensics, or Cloud Security'},
+    ]
+  },
+  {
+    id:'cloud',icon:'☁️',color:'rgba(0,229,180,0.08)',
+    name:'Cloud Computing',
+    tagline:'Build and manage cloud infrastructure',
+    overview:'Cloud engineers design, build, and manage computing infrastructure on platforms like AWS, Azure, and GCP. Every major company now runs in the cloud.',
+    skills:['AWS/Azure/GCP','Linux','DevOps','Docker','Kubernetes','Networking','IaC'],
+    difficulty:'medium',
+    jobs:['Cloud Engineer','DevOps Engineer','Solutions Architect','Cloud Admin','Site Reliability Engineer'],
+    roadmap:[
+      {title:'Cloud Basics',desc:'Understand cloud concepts: IaaS, PaaS, SaaS, regions, services'},
+      {title:'Choose a Platform',desc:'Start with AWS (most popular), Azure, or GCP'},
+      {title:'Linux & Networking',desc:'Servers, VMs, networking in cloud environments'},
+      {title:'DevOps Tools',desc:'Docker, Kubernetes, CI/CD pipelines, Terraform'},
+      {title:'Certification',desc:'AWS Cloud Practitioner → Solutions Architect Associate'},
+      {title:'Build Cloud Projects',desc:'Deploy real apps on cloud, automate with scripts'},
+    ]
+  },
+  {
+    id:'uiux',icon:'🎨',color:'rgba(255,107,107,0.08)',
+    name:'UI/UX Design',
+    tagline:'Design beautiful, usable digital experiences',
+    overview:'UI/UX designers create the visual and interactive experience of apps and websites. The bridge between technology and human behavior.',
+    skills:['Figma','User Research','Wireframing','Prototyping','CSS','Design Systems','Accessibility'],
+    difficulty:'easy',
+    jobs:['UI Designer','UX Designer','Product Designer','Interaction Designer','UX Researcher'],
+    roadmap:[
+      {title:'Design Principles',desc:'Color theory, typography, layout, visual hierarchy'},
+      {title:'Figma',desc:'The industry-standard design tool — wireframes, mockups, prototypes'},
+      {title:'UX Research',desc:'User interviews, personas, journey maps, usability testing'},
+      {title:'Case Studies',desc:'Redesign 2–3 existing apps and document your process'},
+      {title:'HTML/CSS Basics',desc:'Basic web knowledge helps you collaborate with developers'},
+      {title:'Portfolio & Jobs',desc:'Build a Behance/Dribbble portfolio, apply to design roles'},
+    ]
+  },
+  {
+    id:'game',icon:'🎮',color:'rgba(123,95,255,0.12)',
+    name:'Game Development',
+    tagline:'Create worlds, games, and interactive experiences',
+    overview:'Game developers design and build video games from indie mobile games to AAA titles. A creative + technical career that blends art, programming, and storytelling.',
+    skills:['Unity/Unreal','C#/C++','Game Design','3D Modeling','Physics','Audio','Shaders'],
+    difficulty:'hard',
+    jobs:['Game Developer','Gameplay Programmer','Game Designer','Level Designer','Technical Artist'],
+    roadmap:[
+      {title:'Choose an Engine',desc:'Unity (C#) for beginners, Unreal (C++) for advanced graphics'},
+      {title:'Programming Basics',desc:'C# fundamentals with Unity: physics, collisions, input'},
+      {title:'Game Design Concepts',desc:'Mechanics, loop, player psychology, level design'},
+      {title:'Build Small Games',desc:'Flappy Bird, Pong, platformer — complete & publish them'},
+      {title:'Math for Games',desc:'Vectors, matrices, linear algebra for 3D movement'},
+      {title:'Portfolio & Jam',desc:'Join game jams (Ludum Dare), build portfolio, apply to studios'},
+    ]
+  },
+];
+
+const QUIZ_QUESTIONS = [
+  {
+    q:'What do you enjoy most?',
+    hint:'Pick what genuinely excites you',
+    options:[
+      {icon:'🧩',text:'Solving logic puzzles and problems'},
+      {icon:'🎨',text:'Creating visual designs and art'},
+      {icon:'📊',text:'Analyzing data and finding patterns'},
+      {icon:'🛡️',text:'Protecting systems and finding vulnerabilities'},
+    ]
+  },
+  {
+    q:'How comfortable are you with mathematics?',
+    hint:'Be honest — it helps us recommend accurately',
+    options:[
+      {icon:'🔥',text:'I love math — calculus, statistics, algebra'},
+      {icon:'✅',text:'Comfortable with basic math and logic'},
+      {icon:'😐',text:'Manageable, not my favorite subject'},
+      {icon:'🎭',text:'I prefer creative work over equations'},
+    ]
+  },
+  {
+    q:'What kind of end product excites you most?',
+    hint:'Imagine showing your work to a friend',
+    options:[
+      {icon:'🌐',text:'A website or web app people use daily'},
+      {icon:'📱',text:'A mobile app on the App Store'},
+      {icon:'🤖',text:'An AI that learns and predicts'},
+      {icon:'🎮',text:'A game people play for hours'},
+    ]
+  },
+  {
+    q:'Which work style fits you?',
+    hint:'Think about your ideal work environment',
+    options:[
+      {icon:'💡',text:'Building new things from scratch'},
+      {icon:'🔍',text:'Investigating, researching, and analyzing'},
+      {icon:'🤝',text:'Designing for users and testing with people'},
+      {icon:'⚙️',text:'Optimizing and maintaining systems'},
+    ]
+  },
+  {
+    q:'What\'s your biggest strength?',
+    hint:'What do others compliment you on?',
+    options:[
+      {icon:'🎨',text:'Creativity and aesthetic sense'},
+      {icon:'🧠',text:'Logical thinking and attention to detail'},
+      {icon:'💬',text:'Communication and understanding people'},
+      {icon:'🚀',text:'Learning fast and adapting quickly'},
+    ]
+  },
+  {
+    q:'What kind of impact do you want to make?',
+    hint:'Your deeper motivation matters',
+    options:[
+      {icon:'🌍',text:'Build products used by millions of people'},
+      {icon:'🔒',text:'Protect people and systems from harm'},
+      {icon:'📈',text:'Help businesses make data-driven decisions'},
+      {icon:'🎭',text:'Create entertaining or artistic experiences'},
+    ]
+  },
+];
+
+const QUIZ_SCORING = {
+  // [q_idx][opt_idx] → array of career IDs with weights
+  0:{0:['software','ai','data','cyber'],1:['uiux','webdev','game'],2:['data','ai'],3:['cyber','cloud']},
+  1:{0:['ai','data','game'],1:['software','webdev','cloud'],2:['mobile','uiux'],3:['uiux','game','webdev']},
+  2:{0:['webdev','software'],1:['mobile','software'],2:['ai','data'],3:['game','uiux']},
+  3:{0:['software','webdev','mobile'],1:['data','ai','cyber'],2:['uiux','game'],3:['cloud','devops','cyber']},
+  4:{0:['uiux','game'],1:['software','cyber','ai'],2:['uiux','data'],3:['software','mobile','webdev']},
+  5:{0:['webdev','software','mobile'],1:['cyber','cloud'],2:['data','ai'],3:['game','uiux']},
+};
+
+const ROADMAPS = {
+  'Web Dev':[
+    {phase:'Month 1',title:'HTML & CSS Mastery',desc:'Learn semantic HTML5, CSS3, Flexbox, Grid. Build 3 static webpages.',resources:['freeCodeCamp','W3Schools','Scrimba']},
+    {phase:'Month 2',title:'JavaScript Fundamentals',desc:'Variables, functions, arrays, DOM manipulation, events, ES6+',resources:['javascript.info','Eloquent JS','Codecademy']},
+    {phase:'Month 3',title:'React Basics',desc:'Components, props, state, hooks, routing with React Router',resources:['Official React Docs','Scrimba React','Bob Ziroll']},
+    {phase:'Month 4',title:'Backend with Node.js',desc:'Express.js, REST APIs, MongoDB, authentication basics',resources:['The Odin Project','Node.js Docs','Traversy Media']},
+    {phase:'Month 5-6',title:'Full Stack Projects',desc:'Build 2 full-stack projects: e.g. a blog + a task manager',resources:['GitHub','Netlify','Vercel']},
+    {phase:'Month 7+',title:'Job Search',desc:'Polish resume, deploy portfolio site, apply to 5 jobs/week',resources:['LinkedIn','AngelList','Indeed']},
+  ],
+  'Python & AI':[
+    {phase:'Week 1-2',title:'Python Fundamentals',desc:'Syntax, variables, loops, functions, OOP basics',resources:['Python.org','Automate the Boring Stuff','Codecademy']},
+    {phase:'Week 3-4',title:'Data Analysis',desc:'NumPy, Pandas, data loading, cleaning, basic stats',resources:['Kaggle Learn','Real Python','DataCamp']},
+    {phase:'Month 2',title:'Data Visualization',desc:'Matplotlib, Seaborn, storytelling with data',resources:['Matplotlib Docs','Towards Data Science','Kaggle']},
+    {phase:'Month 3',title:'Machine Learning',desc:'Scikit-learn, supervised learning, model evaluation',resources:['Hands-On ML Book','fast.ai','Coursera Andrew Ng']},
+    {phase:'Month 4-5',title:'Deep Learning',desc:'Neural networks, TensorFlow/PyTorch, CNN basics',resources:['Deep Learning AI','fast.ai','PyTorch Docs']},
+    {phase:'Month 6+',title:'Projects & Kaggle',desc:'3+ ML projects, Kaggle competitions, publish on GitHub',resources:['Kaggle','Papers with Code','Hugging Face']},
+  ],
+  'UI/UX':[
+    {phase:'Week 1',title:'Design Fundamentals',desc:'Color theory, typography, layout principles, visual hierarchy',resources:['Canva Design School','Google UX Cert','YouTube: AJ&Smart']},
+    {phase:'Week 2-3',title:'Figma Mastery',desc:'Frames, components, auto-layout, prototypes, design systems',resources:['Figma Official Tutorials','DesignCourse','Scrimba']},
+    {phase:'Month 2',title:'UX Research',desc:'User personas, journey maps, wireframing, usability testing',resources:['Nielsen Norman Group','UX Collective','Google UX Cert']},
+    {phase:'Month 3',title:'Case Studies',desc:'Redesign 2 apps (e.g. bank app, food delivery). Document your process',resources:['Behance','Dribbble','UX Collective']},
+    {phase:'Month 4',title:'HTML/CSS for Designers',desc:'Basic coding skills to collaborate with developers effectively',resources:['freeCodeCamp','Scrimba','Kevin Powell YouTube']},
+    {phase:'Month 5+',title:'Portfolio & Jobs',desc:'Launch portfolio on Behance, apply to junior/internship roles',resources:['Behance','LinkedIn','Dribbble']},
+  ],
+  'Cybersecurity':[
+    {phase:'Month 1',title:'Networking Fundamentals',desc:'TCP/IP, DNS, HTTP/HTTPS, ports, firewalls, OSI model',resources:['CompTIA Network+','Professor Messer','Cisco NetAcad']},
+    {phase:'Month 2',title:'Linux & Command Line',desc:'File system, permissions, scripting, process management',resources:['OverTheWire Bandit','Linux Journey','TryHackMe']},
+    {phase:'Month 3',title:'Security Concepts',desc:'Encryption, authentication, OWASP Top 10, common attack vectors',resources:['OWASP','Cybrary','Hack The Box']},
+    {phase:'Month 4',title:'Ethical Hacking',desc:'Kali Linux, Nmap, Metasploit, CTF challenges',resources:['TryHackMe','HackTheBox','TCM Security']},
+    {phase:'Month 5',title:'Certification',desc:'CompTIA Security+ or Google Cybersecurity Professional Certificate',resources:['CompTIA','Coursera','Udemy']},
+    {phase:'Month 6+',title:'Specialization & Jobs',desc:'Choose: blue team, red team, or cloud security. Build lab',resources:['LinkedIn','CyberSeek','Bug Bounty Programs']},
+  ],
+};
+
+const DICT_TERMS = [
+  {term:'Algorithm',cat:'CS Basics',icon:'🔢',def:'A step-by-step set of instructions for solving a problem, like a recipe for your computer.',example:'Sorting a list of names alphabetically is an algorithm.'},
+  {term:'API',cat:'Web Dev',icon:'🔌',def:'Application Programming Interface — a way for two apps to communicate. Like a waiter taking your order to the kitchen.',example:'Weather apps use weather APIs to get real-time data.'},
+  {term:'Frontend',cat:'Web Dev',icon:'🎨',def:'Everything you see and interact with on a website — buttons, colors, layout. Built with HTML, CSS, JavaScript.',example:'The "Buy Now" button and product images are frontend.'},
+  {term:'Backend',cat:'Web Dev',icon:'⚙️',def:'The behind-the-scenes logic of a website: databases, servers, and the code users never see.',example:'When you log in, the backend checks your password.'},
+  {term:'Database',cat:'CS Basics',icon:'🗄️',def:'An organized collection of data stored digitally. Think of it like a giant, searchable Excel spreadsheet.',example:'Netflix stores all your watch history in a database.'},
+  {term:'Machine Learning',cat:'AI/ML',icon:'🤖',def:'A type of AI where computers learn patterns from data without being explicitly programmed every step.',example:'Gmail\'s spam filter learns which emails are junk over time.'},
+  {term:'Git',cat:'Tools',icon:'🌿',def:'A version control system that tracks changes to your code, like a time machine for your projects.',example:'Developers use Git to collaborate without overwriting each other\'s work.'},
+  {term:'Repository',cat:'Tools',icon:'📦',def:'A storage location for your project\'s code, including all its history. Often hosted on GitHub.',example:'Your school project\'s code saved on GitHub is a repository.'},
+  {term:'Framework',cat:'Web Dev',icon:'🏗️',def:'A pre-built set of tools and rules that give structure to your code, saving you from starting from scratch.',example:'React is a framework for building user interfaces.'},
+  {term:'DevOps',cat:'Cloud',icon:'♾️',def:'A set of practices that combines software development and operations to deliver apps faster and more reliably.',example:'Automatically testing and deploying code when you push to GitHub.'},
+  {term:'Cloud',cat:'Cloud',icon:'☁️',def:'Storing and accessing data/programs over the internet instead of on your own computer\'s hard drive.',example:'Google Drive and Dropbox are cloud storage services.'},
+  {term:'Open Source',cat:'CS Basics',icon:'🌍',def:'Software whose source code is freely available for anyone to use, modify, and share.',example:'Linux, Python, and VS Code are all open source.'},
+  {term:'UI',cat:'Design',icon:'🖼️',def:'User Interface — the visual elements users interact with: buttons, menus, colors, and layouts.',example:'The icons and menus on your phone are UI elements.'},
+  {term:'UX',cat:'Design',icon:'🧑‍💻',def:'User Experience — how a person feels when interacting with a product. Is it easy? Enjoyable? Frustrating?',example:'A website where you can\'t find the checkout button has bad UX.'},
+  {term:'Debugging',cat:'CS Basics',icon:'🐛',def:'The process of finding and fixing errors (bugs) in your code. One of a developer\'s most common tasks.',example:'Your app crashes? You need to debug it.'},
+  {term:'Deployment',cat:'Tools',icon:'🚀',def:'Releasing your application so others can use it — putting it live on the internet or a server.',example:'Publishing your website on Netlify is deployment.'},
+  {term:'Encryption',cat:'Security',icon:'🔐',def:'Converting data into a secret code so only authorized people can read it.',example:'Your bank uses encryption so your account details stay private.'},
+  {term:'Neural Network',cat:'AI/ML',icon:'🧬',def:'A computing system loosely modeled after the human brain, consisting of layers of interconnected nodes.',example:'Image recognition AI uses neural networks to identify cats vs dogs.'},
+];
+
+const JOURNEY_STAGES = [
+  {icon:'📚',color:'rgba(79,143,255,0.12)',stage:'8th–10th Grade',label:'School Student (Early)',items:['Explore different tech fields — don\'t commit yet','Learn basic computer skills & typing speed','Try Scratch or Code.org for fun','Play with Python: print("Hello World!")','Watch YouTube: CS50, TechWorld with Nana','Join your school\'s computer club']},
+  {icon:'🔬',color:'rgba(123,95,255,0.12)',stage:'11th–12th Grade',label:'School Student (Senior)',items:['Choose 1–2 areas to explore deeply','Complete a free online course (freeCodeCamp, Coursera)','Build your first small project','Create a GitHub account and push code','Participate in hackathons or coding contests','Start following tech news and trends']},
+  {icon:'🌱',color:'rgba(0,229,180,0.1)',stage:'1st & 2nd Year',label:'College — Foundation',items:['Focus on DSA (Data Structures & Algorithms)','Master 1 programming language deeply','Complete 2–3 online courses in your interest area','Start contributing to GitHub daily','Network on LinkedIn — connect with seniors','Build 1 personal project by end of year 1']},
+  {icon:'🚀',color:'rgba(255,201,71,0.1)',stage:'3rd Year',label:'College — Internship Prep',items:['Apply for summer internships (start 3 months early)','Solve 100+ LeetCode problems for coding rounds','Polish your resume and LinkedIn profile','Build a portfolio of 3–4 projects','Attend college tech fests and hackathons','Get referrals from seniors at top companies']},
+  {icon:'🏆',color:'rgba(255,107,107,0.1)',stage:'Final Year',label:'Placement Preparation',items:['Practice coding interviews daily on LeetCode/GFG','Know system design basics for FAANG','Study OS, DBMS, CN, OOPS — core CS subjects','Mock interviews with friends or platforms','Target 20+ company applications','Have a freelance project or internship on resume']},
+];
+
+const MYTHS = [
+  {myth:'You need a CS degree to work in tech',fact:'Many top developers and engineers are self-taught or come from bootcamps. Skills and projects matter more than your degree.'},
+  {myth:'You must be a math genius to code',fact:'Most coding jobs require basic logic, not advanced calculus. Math is only critical for specific fields like AI or graphics.'},
+  {myth:'You need to be an introvert to work in tech',fact:'Tech has sales, design, project management, and marketing roles. Communication skills are highly valued everywhere.'},
+  {myth:'You have to learn C++ first to be a real programmer',fact:'Python, JavaScript, and many other beginner-friendly languages are used by millions of professionals in top companies.'},
+  {myth:'Tech is only for young people who start at age 10',fact:'People switch to tech careers in their 30s, 40s, and beyond. Age is never a barrier — consistency is what matters.'},
+  {myth:'You need to buy expensive courses to learn',fact:'YouTube, freeCodeCamp, The Odin Project, and CS50 are world-class resources that are 100% free.'},
+  {myth:'Once you pick a path, you\'re stuck with it',fact:'Many developers switch between frontend, backend, data, and DevOps throughout their careers. Tech is flexible.'},
+  {myth:'You have to work 80 hours a week in tech',fact:'Most tech jobs offer excellent work-life balance, remote work options, and reasonable hours. It varies by company.'},
+];
+
+const RESOURCES = {
+  '🎓 Courses':[
+    {icon:'🆓',name:'freeCodeCamp',desc:'Full web dev curriculum, completely free. HTML, CSS, JS, Python, and more.',free:'free'},
+    {icon:'📖',name:'CS50 by Harvard',desc:'The world\'s best intro to computer science. Free on edX. Life-changing.',free:'free'},
+    {icon:'🎯',name:'The Odin Project',desc:'Free full-stack web dev path with real projects and community support.',free:'free'},
+    {icon:'🎓',name:'Coursera',desc:'University courses from top schools. Many free to audit. Certificates available.',free:'mixed'},
+    {icon:'⚡',name:'Scrimba',desc:'Interactive coding courses. Code inside the video. Very beginner-friendly.',free:'mixed'},
+    {icon:'🐍',name:'Kaggle Learn',desc:'Free micro-courses in Python, ML, SQL, and data science. With practice notebooks.',free:'free'},
+  ],
+  '📚 Books':[
+    {icon:'📗',name:'Automate the Boring Stuff',desc:'Perfect first Python book. Free online. Real, practical examples you\'ll actually use.',free:'free'},
+    {icon:'📘',name:'Eloquent JavaScript',desc:'The best free JavaScript book. Goes from basics to advanced concepts.',free:'free'},
+    {icon:'📕',name:'Clean Code by Robert Martin',desc:'How to write code that others can read and maintain. A must-read classic.',free:'paid'},
+    {icon:'📙',name:'Cracking the Coding Interview',desc:'The #1 book for tech interview preparation at top companies.',free:'paid'},
+    {icon:'📗',name:'Designing Data-Intensive Applications',desc:'Deep dive into how large-scale systems work. For advanced learners.',free:'paid'},
+    {icon:'📘',name:'Don\'t Make Me Think',desc:'Classic UX book about web usability. Simple and very readable.',free:'paid'},
+  ],
+  '💻 Platforms':[
+    {icon:'⚔️',name:'LeetCode',desc:'The go-to platform for coding interview practice. 2000+ problems, company-wise.',free:'mixed'},
+    {icon:'🏠',name:'HackerRank',desc:'Skill certifications and coding challenges. Used by recruiters to evaluate candidates.',free:'mixed'},
+    {icon:'🔐',name:'TryHackMe',desc:'Learn cybersecurity through hands-on hacking labs. Great for beginners.',free:'mixed'},
+    {icon:'🎮',name:'Codewars',desc:'Level up your coding skills through fun kata challenges in many languages.',free:'free'},
+    {icon:'🏗️',name:'Frontend Mentor',desc:'Real-world frontend projects with designs to build. Build your portfolio.',free:'mixed'},
+    {icon:'🏆',name:'Kaggle',desc:'Data science competitions, free datasets, notebooks, and learning tracks.',free:'free'},
+  ],
+  '📺 YouTube':[
+    {icon:'🎬',name:'Traversy Media',desc:'Web dev tutorials: HTML, CSS, JS, React, Node.js. Very beginner-friendly.',free:'free'},
+    {icon:'🎥',name:'The Net Ninja',desc:'Short, clear video series on web technologies. Great pacing for beginners.',free:'free'},
+    {icon:'💡',name:'Fireship',desc:'Fast-paced 100-second videos and deeper dives. Makes complex topics fun.',free:'free'},
+    {icon:'🤖',name:'Andrej Karpathy',desc:'In-depth neural network and AI tutorials from an ex-Tesla/OpenAI researcher.',free:'free'},
+    {icon:'📊',name:'StatQuest with Josh Starmer',desc:'Statistics and ML concepts explained with amazing clarity and humor.',free:'free'},
+    {icon:'🔒',name:'NetworkChuck',desc:'Cybersecurity and networking tutorials. Very entertaining and informative.',free:'free'},
+  ],
+};
+
+// ============================================================
+// THEME
+// ============================================================
+function toggleTheme(){
+  const html=document.documentElement;
+  const isDark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',isDark?'light':'dark');
+  document.querySelector('.theme-toggle').textContent=isDark?'🌙':'☀️';
+}
+
+// ============================================================
+// MOBILE MENU
+// ============================================================
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ============================================================
+// RENDER CAREERS
+// ============================================================
+function renderCareers(){
+  const grid=document.getElementById('careerGrid');
+  grid.innerHTML=CAREERS.map(c=>`
+    <div class="career-card fade-in" onclick="openCareerModal('${c.id}')">
+      <div class="career-card-header">
+        <div class="career-icon" style="background:${c.color}">${c.icon}</div>
+        <div class="career-card-meta">
+          <div class="career-name">${c.name}</div>
+          <div style="font-size:13px;color:var(--text3);margin-top:2px">${c.tagline}</div>
+        </div>
+      </div>
+      <div class="career-card-body">
+        <div class="career-overview">${c.overview.substring(0,120)}…</div>
+        <div class="career-skills">${c.skills.slice(0,5).map(s=>`<span class="skill-chip">${s}</span>`).join('')}</div>
+        <div class="career-footer">
+          <span class="tag tag-${c.difficulty==='easy'?'easy':c.difficulty==='hard'?'hard':'medium'}">
+            ${c.difficulty==='easy'?'⭐ Beginner Friendly':c.difficulty==='hard'?'🔥 Advanced':'⚡ Intermediate'}
+          </span>
+          <span class="career-expand">View Roadmap →</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openCareerModal(id){
+  const c=CAREERS.find(x=>x.id===id);
+  const modal=document.getElementById('modalContent');
+  modal.innerHTML=`
+    <div class="modal-header">
+      <div class="modal-icon" style="background:${c.color};font-size:30px">${c.icon}</div>
+      <div>
+        <div class="modal-title">${c.name}</div>
+        <div class="modal-sub">${c.tagline}</div>
+      </div>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Overview</div>
+      <p style="font-size:15px;color:var(--text2);line-height:1.7">${c.overview}</p>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Required Skills</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">${c.skills.map(s=>`<span class="skill-chip" style="font-size:13px;padding:6px 14px">${s}</span>`).join('')}</div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Career Opportunities</div>
+      <div class="job-grid">${c.jobs.map(j=>`<span class="job-tag">${j}</span>`).join('')}</div>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Beginner Roadmap</div>
+      <div class="roadmap-steps">
+        ${c.roadmap.map((s,i)=>`
+          <div class="roadmap-step">
+            <div class="step-content">
+              <div class="step-title">Step ${i+1}: ${s.title}</div>
+              <div class="step-desc">${s.desc}</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  document.getElementById('careerModal').classList.add('open');
+  document.body.style.overflow='hidden';
+  markExplored(id);
+}
+function closeModal(e){
+  if(e.target.classList.contains('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect(){
+  document.getElementById('careerModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ============================================================
+// QUIZ
+// ============================================================
+let quizAnswers=[];
+let quizCurrent=0;
+
+function renderQuiz(){
+  const w=document.getElementById('quizWrapper');
+  if(quizCurrent>=QUIZ_QUESTIONS.length){showQuizResult();return;}
+  const q=QUIZ_QUESTIONS[quizCurrent];
+  const pct=Math.round((quizCurrent/QUIZ_QUESTIONS.length)*100);
+  w.innerHTML=`
+    <div class="quiz-progress">
+      <div class="quiz-step-num">Question ${quizCurrent+1} of ${QUIZ_QUESTIONS.length}</div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:${pct}%"></div></div>
+      <div class="quiz-step-num">${pct}%</div>
+    </div>
+    <div class="quiz-question">${q.q}</div>
+    <div class="quiz-hint">${q.hint}</div>
+    <div class="quiz-options">
+      ${q.options.map((o,i)=>`
+        <button class="quiz-option" onclick="selectOption(${i})" data-idx="${i}">
+          <span class="quiz-option-icon">${o.icon}</span>
+          ${o.text}
+        </button>
+      `).join('')}
+    </div>
+    <div class="quiz-nav">
+      ${quizCurrent>0?`<button class="btn btn-ghost" style="padding:10px 20px;font-size:14px" onclick="quizBack()">← Back</button>`:'<div></div>'}
+      <button class="btn btn-primary" style="opacity:0.4;pointer-events:none" id="quizNext" onclick="quizNext()">Next →</button>
+    </div>
+  `;
+  if(quizAnswers[quizCurrent]!==undefined){
+    document.querySelectorAll('.quiz-option')[quizAnswers[quizCurrent]].classList.add('selected');
+    document.getElementById('quizNext').style.opacity='1';
+    document.getElementById('quizNext').style.pointerEvents='auto';
+  }
+}
+
+function selectOption(i){
+  quizAnswers[quizCurrent]=i;
+  document.querySelectorAll('.quiz-option').forEach((el,idx)=>{
+    el.classList.toggle('selected',idx===i);
+  });
+  const btn=document.getElementById('quizNext');
+  btn.style.opacity='1';btn.style.pointerEvents='auto';
+}
+function quizNext(){
+  if(quizAnswers[quizCurrent]===undefined)return;
+  quizCurrent++;renderQuiz();
+}
+function quizBack(){
+  if(quizCurrent>0){quizCurrent--;renderQuiz();}
+}
+
+function showQuizResult(){
+  const scores={};
+  CAREERS.forEach(c=>scores[c.id]=0);
+  quizAnswers.forEach((ans,qi)=>{
+    const ids=QUIZ_SCORING[qi]?.[ans]||[];
+    ids.forEach(id=>{if(scores[id]!==undefined)scores[id]++;});
+  });
+  const sorted=Object.entries(scores).sort((a,b)=>b[1]-a[1]).slice(0,3);
+  const top=CAREERS.find(c=>c.id===sorted[0][0]);
+  state.quiz=top.id;logActivity('Completed the Career Quiz → '+top.name,'🎯 Matched');renderDashboard();
+  const w=document.getElementById('quizWrapper');
+  w.innerHTML=`
+    <div class="quiz-result">
+      <div class="quiz-result-icon">${top.icon}</div>
+      <div class="quiz-result-title">Your Best Match:<br><span class="grad-text">${top.name}</span></div>
+      <div class="quiz-result-sub">${top.tagline}</div>
+      <p style="font-size:14px;color:var(--text2);line-height:1.7;max-width:480px;margin:0 auto">${top.overview}</p>
+      <div class="quiz-recommendations">
+        <div style="font-weight:700;font-size:14px;margin-bottom:4px;text-align:left">Top Recommendations:</div>
+        ${sorted.map(([id,score],i)=>{
+          const career=CAREERS.find(c=>c.id===id);
+          const pct=Math.round((score/QUIZ_QUESTIONS.length)*100)+40;
+          return `<div class="quiz-rec-card">
+            <div class="quiz-rec-rank">${i+1}</div>
+            <div style="font-size:22px">${career.icon}</div>
+            <div class="quiz-rec-info">
+              <div class="quiz-rec-name">${career.name}</div>
+              <div class="quiz-rec-match">~${Math.min(pct,99)}% match based on your answers</div>
+            </div>
+            <button class="btn btn-ghost" style="padding:8px 16px;font-size:13px" onclick="openCareerModal('${id}')">View →</button>
+          </div>`;
+        }).join('')}
+      </div>
+      <button class="btn btn-ghost" style="margin-top:24px" onclick="quizCurrent=0;quizAnswers=[];renderQuiz()">Retake Quiz</button>
+    </div>
+  `;
+}
+
+// ============================================================
+// ROADMAPS
+// ============================================================
+function renderRoadmaps(){
+  const keys=Object.keys(ROADMAPS);
+  document.getElementById('roadmapTabs').innerHTML=keys.map((k,i)=>`
+    <button class="roadmap-tab ${i===0?'active':''}" onclick="switchRoadmap('${k}',this)">${k}</button>
+  `).join('');
+  const panels=document.getElementById('roadmapPanels');
+  panels.innerHTML=keys.map((k,i)=>`
+    <div class="roadmap-panel ${i===0?'active':''}" id="rp-${k.replace(/[^a-z0-9]/gi,'_')}">
+      <div class="roadmap-visual">
+        ${ROADMAPS[k].map((step,si)=>`
+          <div class="rv-step">
+            <div class="rv-dot"></div>
+            <div class="rv-card">
+              <div class="rv-card-top">
+                <span class="rv-phase">${step.phase}</span>
+                <span class="rv-title">${step.title}</span>
+              </div>
+              <div class="rv-desc">${step.desc}</div>
+              <div class="rv-resources">${step.resources.map(r=>`<span class="rv-res">${r}</span>`).join('')}</div>
+              <div class="progress-check ${state.done[k+'|'+si]?'done':''}" data-key="${k}|${si}" role="checkbox" tabindex="0" aria-checked="${state.done[k+'|'+si]?'true':'false'}" onclick="toggleCheck(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCheck(this)}">
+                <div class="check-box"><span style="font-size:11px;color:#fff">✓</span></div>
+                <span class="check-label">Mark as complete</span>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function switchRoadmap(key,btn){
+  document.querySelectorAll('.roadmap-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.roadmap-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('rp-'+key.replace(/[^a-z0-9]/gi,'_')).classList.add('active');
+}
+
+// (toggleCheck is defined in the Dashboard section below)
+
+// ============================================================
+// DICTIONARY
+// ============================================================
+let dictFilter='All';
+let dictSearch='';
+
+function renderDict(){
+  const cats=['All',...new Set(DICT_TERMS.map(t=>t.cat))];
+  document.getElementById('dictCategories').innerHTML=cats.map(c=>`
+    <button class="dict-cat ${c==='All'?'active':''}" onclick="filterDictCat('${c}',this)">${c}</button>
+  `).join('');
+  renderDictCards();
+}
+
+function renderDictCards(){
+  const filtered=DICT_TERMS.filter(t=>{
+    const matchCat=dictFilter==='All'||t.cat===dictFilter;
+    const matchSearch=!dictSearch||t.term.toLowerCase().includes(dictSearch)||t.def.toLowerCase().includes(dictSearch);
+    return matchCat&&matchSearch;
+  });
+  document.getElementById('dictGrid').innerHTML=filtered.length?filtered.map(t=>`
+    <div class="dict-card fade-in">
+      <div class="dict-term">${t.icon} ${t.term} <span class="tag" style="background:rgba(123,95,255,0.1);color:var(--accent2);font-size:10px">${t.cat}</span></div>
+      <div class="dict-def">${t.def}</div>
+      <div class="dict-example">💡 ${t.example}</div>
+    </div>
+  `).join(''):`<div style="grid-column:1/-1;text-align:center;color:var(--text3);padding:40px">No terms found for "${dictSearch}"</div>`;
+  observeFadeIns();
+}
+
+function filterDictCat(cat,btn){
+  dictFilter=cat;
+  document.querySelectorAll('.dict-cat').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderDictCards();
+}
+
+function filterDict(){
+  dictSearch=document.getElementById('dictSearch').value.toLowerCase();
+  renderDictCards();
+}
+
+// ============================================================
+// STUDENT JOURNEY
+// ============================================================
+function renderJourney(){
+  document.getElementById('journeyGrid').innerHTML=JOURNEY_STAGES.map(s=>`
+    <div class="journey-card fade-in">
+      <div class="journey-stage">
+        <div class="journey-icon" style="background:${s.color}">${s.icon}</div>
+        <div>
+          <div class="journey-stage-name">${s.stage}</div>
+          <div class="journey-stage-label">${s.label}</div>
+        </div>
+      </div>
+      <div class="journey-items">
+        ${s.items.map(item=>`
+          <div class="journey-item">
+            <div class="journey-item-dot"></div>
+            <div class="journey-item-text">${item}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================================
+// MYTHS
+// ============================================================
+function renderMyths(){
+  document.getElementById('mythsGrid').innerHTML=MYTHS.map(m=>`
+    <div class="myth-card fade-in">
+      <div class="myth-top">
+        <div class="myth-icon">❌</div>
+        <div>
+          <div class="myth-label">Common Myth</div>
+          <div class="myth-text">"${m.myth}"</div>
+        </div>
+      </div>
+      <div class="myth-bottom">
+        <div class="myth-icon">✅</div>
+        <div>
+          <div class="myth-fact-label">The Truth</div>
+          <div class="myth-fact-text">${m.fact}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================================
+// RESOURCES
+// ============================================================
+function renderResources(){
+  const keys=Object.keys(RESOURCES);
+  document.getElementById('resourceTabs').innerHTML=keys.map((k,i)=>`
+    <button class="resource-tab ${i===0?'active':''}" onclick="switchResource('${k.replace(/[^a-z0-9]/gi,'_')}',this)">${k}</button>
+  `).join('');
+  document.getElementById('resourcePanels').innerHTML=keys.map((k,i)=>`
+    <div class="resource-panel ${i===0?'active':''}" id="res-${k.replace(/[^a-z0-9]/gi,'_')}">
+      ${RESOURCES[k].map(r=>`
+        <div class="res-card fade-in">
+          <div class="res-icon">${r.icon}</div>
+          <div class="res-info">
+            <div class="res-name">${r.name}</div>
+            <div class="res-desc">${r.desc}</div>
+            <span class="res-free ${r.free}">${r.free==='free'?'Free':r.free==='paid'?'Paid':'Free + Paid'}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+function switchResource(key,btn){
+  document.querySelectorAll('.resource-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.resource-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('res-'+key).classList.add('active');
+  observeFadeIns();
+}
+
+// ============================================================
+// AI CHAT
+// ============================================================
+const chatHistory=[];
+
+async function sendChat(){
+  const input=document.getElementById('chatInput');
+  const text=input.value.trim();
+  if(!text)return;
+  input.value='';
+  addMessage('user',text);
+  document.getElementById('chatSuggestions').innerHTML='';
+  const typing=addTyping();
+  chatHistory.push({role:'user',content:text});
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1000,
+        system:`You are Compass AI, a friendly and knowledgeable tech career mentor for students and beginners aged 14–22. 
+Your goal is to help them understand the tech industry, choose the right career path, and follow structured learning roadmaps.
+
+Guidelines:
+- Be encouraging, friendly, and concise (3–5 sentences typically)
+- Use simple language, avoid jargon unless you explain it
+- When recommending careers, mention: Software Dev, Web Dev, Mobile Dev, AI/ML, Data Science, Cybersecurity, Cloud Computing, UI/UX Design, Game Development
+- When asked for roadmaps, give clear numbered steps
+- Always motivate students and remind them progress > perfection
+- Use emojis sparingly but warmly
+- Never make students feel overwhelmed`,
+        messages:chatHistory,
+      })
+    });
+    const data=await res.json();
+    typing.remove();
+    const reply=data.content?.map(b=>b.text||'').join('')||'Sorry, I had trouble connecting. Please try again!';
+    chatHistory.push({role:'assistant',content:reply});
+    addMessage('bot',reply);
+  }catch(e){
+    typing.remove();
+    addMessage('bot','I\'m having trouble connecting right now. Please check your connection and try again! 🔄');
+  }
+}
+
+function sendSuggestion(text){
+  document.getElementById('chatInput').value=text;
+  sendChat();
+}
+
+function addMessage(role,text){
+  const msgs=document.getElementById('chatMessages');
+  const div=document.createElement('div');
+  div.className=`msg ${role}`;
+  div.innerHTML=`
+    <div class="msg-avatar">${role==='bot'?'🤖':'👤'}</div>
+    <div class="msg-bubble">${text.replace(/\n/g,'<br>')}</div>
+  `;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+  return div;
+}
+
+function addTyping(){
+  const msgs=document.getElementById('chatMessages');
+  const div=document.createElement('div');
+  div.className='msg bot';
+  div.innerHTML=`
+    <div class="msg-avatar">🤖</div>
+    <div class="chat-typing"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>
+  `;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+  return div;
+}
+
+// ============================================================
+// DASHBOARD
+// ============================================================
+const STORE_KEY='techCompass.v1';
+let state={done:{},explored:{},quiz:null,log:[]};
+function loadState(){try{const x=JSON.parse(localStorage.getItem(STORE_KEY)||'null');if(x&&typeof x==='object')state=Object.assign(state,x);}catch(e){}}
+function saveState(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}}
+function logActivity(text,badge){state.log.unshift({text,badge,ts:Date.now()});state.log=state.log.slice(0,8);saveState();}
+function markExplored(id){
+  if(state.explored[id])return;
+  state.explored[id]=true;
+  logActivity('Explored '+CAREERS.find(c=>c.id===id).name,'🔍 Explored');
+  renderDashboard();
+}
+function toggleCheck(el){
+  const key=el.dataset.key,on=!el.classList.contains('done');
+  el.classList.toggle('done',on);
+  el.setAttribute('aria-checked',on?'true':'false');
+  if(on){state.done[key]=true;const [r,i]=key.split('|');logActivity('Completed "'+ROADMAPS[r][+i].title+'" in '+r,'✅ Done');}
+  else delete state.done[key];
+  saveState();renderDashboard();
+}
+function resetProgress(){
+  if(!confirm('Reset all saved progress on this device?'))return;
+  state={done:{},explored:{},quiz:null,log:[]};saveState();renderRoadmaps();renderDashboard();
+}
+function timeAgo(ts){
+  const m=Math.round((Date.now()-ts)/60000);
+  if(m<1)return 'Just now';if(m<60)return m+' min ago';
+  const h=Math.round(m/60);if(h<24)return h+' hr ago';
+  const d=Math.round(h/24);return d+' day'+(d>1?'s':'')+' ago';
+}
+function initFeedback(){
+  const f=document.getElementById('feedbackForm');if(!f)return;
+  f.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const msg=document.getElementById('fbMsg');
+    if(!f.querySelector('input[name=rating]:checked')){msg.textContent='Please pick a rating first.';msg.style.color='var(--accent4)';return;}
+    try{
+      const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
+      if(!res.ok)throw new Error('failed');
+      f.reset();msg.textContent='Thank you! Your feedback helps make Tech Compass better. 💙';msg.style.color='var(--accent3)';
+    }catch(err){msg.textContent='Feedback can only be sent once the site is live on Netlify.';msg.style.color='var(--accent4)';}
+  });
+}
+
+function renderDashboard(){
+  const icons={'Web Dev':'🌐','Python & AI':'🐍','UI/UX':'🎨','Cybersecurity':'🛡️'};
+  const keys=Object.keys(ROADMAPS);
+  let total=0,doneCt=0,finished=0;
+  const rows=keys.map(k=>{
+    const n=ROADMAPS[k].length,d=ROADMAPS[k].filter((_,i)=>state.done[k+'|'+i]).length;
+    total+=n;doneCt+=d;if(d===n)finished++;
+    return {k,n,d,pct:Math.round(d/n*100)};
+  });
+  document.getElementById('progressList').innerHTML=rows.map(p=>`
+    <div class="progress-item">
+      <div class="pi-icon">${icons[p.k]||'📘'}</div>
+      <div class="pi-info">
+        <div class="pi-title">${p.k} <span style="font-weight:400;color:var(--text3);font-size:12px">· ${p.d}/${p.n} steps</span></div>
+        <div class="pi-bar"><div class="pi-fill" style="width:${p.pct}%"></div></div>
+      </div>
+      <div class="pi-pct">${p.pct}%</div>
+    </div>`).join('');
+
+  const explored=Object.keys(state.explored).length;
+  const rings=[
+    {label:'Steps done',pct:Math.round(doneCt/total*100)},
+    {label:'Careers seen',pct:Math.round(explored/CAREERS.length*100)},
+    {label:'Roadmaps done',pct:Math.round(finished/keys.length*100)},
+  ];
+  const r=54,c=2*Math.PI*r;
+  document.getElementById('progressRings').innerHTML=rings.map((g,i)=>`
+    <div class="progress-ring-item">
+      <svg class="ring-svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="${g.label}: ${g.pct}%">
+        <defs><linearGradient id="rg${i}" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="${i===1?'#00e5b4':'#4f8fff'}"/><stop offset="100%" stop-color="${i===1?'#4f8fff':'#7b5fff'}"/>
+        </linearGradient></defs>
+        <g transform="rotate(-90 60 60)">
+          <circle class="ring-bg" cx="60" cy="60" r="${r}" fill="none" stroke-width="8"/>
+          <circle class="ring-fill" cx="60" cy="60" r="${r}" fill="none" stroke-width="8" stroke="url(#rg${i})" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-g.pct/100)}"/>
+        </g>
+        <text x="60" y="60" text-anchor="middle" font-family="Syne,sans-serif" font-size="20" font-weight="800" fill="var(--text)">${g.pct}%</text>
+        <text x="60" y="78" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="var(--text3)">${g.label}</text>
+      </svg>
+    </div>`).join('');
+
+  document.getElementById('activityList').innerHTML=state.log.length?state.log.map(a=>`
+    <div class="activity-item">
+      <div class="activity-dot" style="background:var(--accent)"></div>
+      <div class="activity-text"><strong>${a.text}</strong><span>${timeAgo(a.ts)}</span></div>
+      <span class="activity-badge">${a.badge}</span>
+    </div>`).join(''):'<div class="empty-note">Nothing yet — take the quiz, explore a career, or tick a roadmap step to get started.</div>';
+}
+
+// ============================================================
+// INTERSECTION OBSERVER (fade-in)
+// ============================================================
+function observeFadeIns(){
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.fade-in:not(.visible)').forEach(el=>observer.observe(el));
+}
+
+// ============================================================
+// ACTIVE NAV
+// ============================================================
+function updateActiveNav(){
+  const sections=document.querySelectorAll('section[id]');
+  const scrollY=window.scrollY+80;
+  let currentId='';
+  sections.forEach(s=>{if(scrollY>=s.offsetTop)currentId=s.id;});
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.classList.toggle('active',a.getAttribute('href')==='#'+currentId);
+  });
+}
+window.addEventListener('scroll',updateActiveNav);
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded',()=>{
+  loadState();
+  renderCareers();
+  renderQuiz();
+  renderRoadmaps();
+  renderDict();
+  renderJourney();
+  renderMyths();
+  renderResources();
+  renderDashboard();
+  initFeedback();
+  observeFadeIns();
+  // Keyboard shortcut to close modal
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect();});
+});
+</script>
+</body>
+</html>
