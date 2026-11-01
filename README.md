@@ -4,7 +4,7 @@
 
 A free, beginner-friendly guide to technology careers for school and college students.
 
-🔗 **Live site:** [your link]
+🔗 **Live site:** [https://techcompass-india.netlify.app]
 
 ## What it does
 
